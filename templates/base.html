@@ -2,9 +2,188 @@
 <html>
 <head>
 	<title>{{title}}</title>
+	<style>
+	* {
+  box-sizing: border-box;
+}
+
+body,
+input {
+ font-family: 'Roboto', sans-serif;
+}
+
+body {
+  font: 1em/1.5;
+  color: #184f68;
+  background: #47e3ff;
+}
+
+h1 {
+	font-size: 2.5em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+	margin: 0;
+	color: black;
+	text-align: center;
+}
+
+/* ================================= 
+  Form Element Styles
+==================================== */
+
+form {
+	padding: .875em 1.875em 1.875em;
+	background: white;
+	border-radius: 10px;
+	border: 5px solid tomato;
+}
+
+fieldset,
+legend,
+button {
+	padding: 0;
+	border: none;
+	border-radius: 10px;
+}
+
+fieldset, legend {
+	margin-top: 1.5em;
+	padding: 15px; 
+}
+fieldset {
+	box-shadow: 1px 1px 3px 2px #ff6347;
+	padding-top: 25px;
+}
+
+input[type="text"],
+input[type="password"] {
+	width: 100%;
+	border-radius: 5px;
+	background-color: #ecfcff;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+	background-color: white;
+	border-color: tomato;
+}
+
+label {
+	color: #000;
+	display: block;
+	margin-bottom: .5em;
+}
+
+input,
+select {
+	margin-bottom: 1.125em;	
+}
+
+input {
+	font-size: 1em;
+	font-weight: 500;
+	padding: .8em;
+	background: #c1deeb;
+	border: 2px solid #c1deeb;
+	outline: none;
+}
+
+input:focus {
+	background: #fff;
+	border-color: #5e97b0;
+	transition: border-color .4s, background-color .4s;
+}
+input[type="submit"] {
+	color: #fff;
+	background: tomato;
+	padding: .55em 1.25em;
+	margin: 1.25em 0 .5em;
+	cursor: pointer;
+}
+input[type="submit"]:hover {
+	background: #184c62;
+	border: 5px solid tomato;
+}
+/* ================================= 
+  Page Styles
+==================================== */
+
+.container {
+	margin: auto;
+	max-width: 680px;
+}
+
+.shirt div {
+	float: left;
+	margin-right: .85em;
+}
+
+.interests input {
+	margin-bottom: 0;
+}
+
+.credit-card {
+	margin-top: 1.25em;
+}
+
+/* ================================= 
+  Helper Classes
+==================================== */
+
+.is-hidden {
+	display: none;
+}
+
+.clearfix::after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 0) and (max-width: 679px) {
+	header {
+		padding: 2em 0;
+	}
+	button {
+		width: 100%;
+	}
+}
+
+@media (min-width: 680px) {
+	header {
+		padding: 4.65em 0 2.5em;
+	}
+	.col {
+		float: left;
+	}
+	.col + .col {
+		margin-left: 2.5%;
+	}
+	.col-3 {
+		width: 23%;
+	}
+	.col-6 {
+		width: 49%;
+	}
+}
+.error {
+	color: red;
+	font-weight: bolder;
+	background: white;
+}
+.fieldError {
+	border: 4px solid red;
+}
+.disabled {
+    color:#ccc;
+    text-decoration: line-through;
+}
 	{% block style %}
 	{% endblock %}
-	
+	</style>
 </head>
 <body>
 	<h1>{{self.title}}</h1>
