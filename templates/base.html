@@ -181,9 +181,24 @@ input[type="submit"]:hover {
     color:#ccc;
     text-decoration: line-through;
 }
+body {
+	background: url('http://www.powerpointhintergrund.com/uploads/2017/06/notebook-leaf-texture-background-photo-download-notebook-yellow--13.jpeg');
+}
+form {
+	background-color: rgba(255,255,255,0.75);
+}
+p {
+	background-color: rgba(255,255,255,0.0);
+}
+p.error {
+		color:red;
+		clear: both;
+		background-color: rgba(255,255,255,0.0);
+	}
 	{% block style %}
 	{% endblock %}
 	</style>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
 	<h1>{{self.title}}</h1>

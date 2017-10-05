@@ -70,8 +70,8 @@ def validate():
         pclass = 'fieldError'
         
     #Verify Password Validation
-    """if is_blank(verpassword):
-        verpassword_error = 'Verify Password field must not be blank'"""
+    if is_blank(verpassword):
+        verpassword_error = 'Verify Password field must not be blank'
     if password != verpassword:
         verpassword_error = 'Verify Password must match Password'
         password = ''
